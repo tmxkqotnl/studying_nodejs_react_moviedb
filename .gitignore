@@ -1,4 +1,4 @@
 /node_modules
 .env
-/config/development.js
+development.js
 .vscode
