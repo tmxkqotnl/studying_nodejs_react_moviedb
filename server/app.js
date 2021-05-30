@@ -20,7 +20,7 @@ const server = async () =>{
     useUnifiedTopology:true,
     useNewUrlParser:true
   });
-  console.log('DB is connected');
+  console.log('데이터베이스 연결됨');
 
   app.set('port',process.env.PORT);
   app.use(express.urlencoded({extended:true}));
@@ -61,3 +61,4 @@ const server = async () =>{
   }
 }
 
+server();

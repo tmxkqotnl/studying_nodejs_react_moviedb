@@ -2,8 +2,8 @@
   "name": "moviedb",
   "version": "1.0.0",
   "description": "inflearn",
-  "main": "app.js",
   "scripts": {
+    "backend":"nodemon ./server/app.js",
     "dev": "concurrently \"nodemon app\" \"npm start --prefix client\""
   },
   "author": "easthoon",
