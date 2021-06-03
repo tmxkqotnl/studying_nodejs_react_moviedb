@@ -9,6 +9,7 @@ const morgan = require('morgan');
 const {MONGO_URI} = require('./config/Key');
 
 const apiUserRouter = require('./routes/user');
+const apiFavoriteRouter = require('./routes/favorite');
 
 dotenv.config();
 
@@ -28,8 +29,11 @@ const server = async () =>{
   app.use(cors());
   app.use(express.json());
   app.use(cookieParser());
-  app.use('/api/user', apiUserRouter);
   app.use('/uploads', express.static('uploads'));
+  
+  app.use('/api/user', apiUserRouter);
+  app.use('/api/favorite', apiFavoriteRouter);
+  
   
   // 배포 시 클라이언트에게 서버가 줄 모든 데이터가 있는 디렉토리 설정
   if (process.env.NODE_ENV === "production") {

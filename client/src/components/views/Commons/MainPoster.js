@@ -26,8 +26,8 @@ function MainPoster(props) {
             backdropFilter: "blur(10px)",
           }}
         >
-          <h2 style={{ color: "black" }}>{props.title}</h2>
-          <p style={{ color: "black", fontSize: "1rem" }}>{props.description}</p>
+          <h2 style={{ color: "gray" }}>{props.title}</h2>
+          <p style={{ color: "white", fontWeight:"bold", fontSize: "1rem" }}>{props.description}</p>
         </div>
       </div>
     </div>
